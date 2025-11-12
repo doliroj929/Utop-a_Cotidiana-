@@ -1,0 +1,103 @@
+/*variables e importaciones*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Nosifer&display=swap');
+
+
+:root{
+    --color-verde_claro:#40C9A2;
+    --color-vede_oscuro:#2F9C95;
+    --color-blanco:#fbfffe;
+    --color-negro:#1b1b1e;
+    --fuente-general: "Nosifer", sans-serif;
+}
+
+
+/*Receteo de estilo*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+
+.menu__logo{
+  display: flex;
+    background-color: var(--color-blanco);
+    border-radius: 50%;
+    transition: 1s;
+
+}
+
+
+.menu__logo:hover{
+    background-color: var(--color-verde_claro);
+    transition: 1s;
+}
+
+
+.menu__logo--imagen{
+    width:9rem;
+    height:7rem;
+    object-fit: cover;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-vede_oscuro);
+    color: darkorange;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.10rem;
+    font-family:var(--fuente-general);
+    font-size: 1rem;
+    transition: 1s;
+    cursor: pointer;
+    transition:  1s;
+}
+
+.menu__opcion__enlace{
+    color: var(--color-blanco);
+}
+
+.menu__opcion {
+    background-color: var(--color-vede_oscuro);
+    color: orange;
+    border-radius: 100%;
+    padding: 0.50rem;
+    transition: 0.2s;
+    cursor: pointer;
+
+}
+
+    .menu__opcion:hover{
+    background-color: var(--color-verde_claro);
+    transition: 0.2s;
+    border-radius: 2rem;
+    padding: 0.50rem;
+}
+
+.banner{
+    height: 15rem;
+    width: 100%;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-vede_oscuro);
+
+    padding: 0.5rem;
+}
+
+.footer__informacion{
+
+    padding: 0.5rem;
+}
