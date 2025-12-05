@@ -1,18 +1,20 @@
 /*variables e importaciones*/
 
 
-@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Nosifer&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 :root{
     --color-verde_claro:#40C9A2;
     --color-vede_oscuro:#2F9C95;
     --color-blanco:#fbfffe;
     --color-negro:#1b1b1e;
-    --fuente-general: "Nosifer", sans-serif;
+    --fuente-general: "Merriweather", serif;
+
 }
 
+body{
+    width: 100%;
+}
 
 /*Receteo de estilo*/
 *{
@@ -21,83 +23,130 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-
+    font-family: 'Merriweather', serif;
 }
-
-
-.menu__logo{
-  display: flex;
-    background-color: var(--color-blanco);
-    border-radius: 50%;
-    transition: 1s;
-
-}
-
-
-.menu__logo:hover{
-    background-color: var(--color-verde_claro);
-    transition: 1s;
-}
-
-
-.menu__logo--imagen{
-    width:9rem;
-    height:7rem;
-    object-fit: cover;
-}
-
 
 .menu{
     display: flex;
-    flex-direction: row;
     background-color: var(--color-vede_oscuro);
-    color: darkorange;
     justify-content: space-evenly;
+}
+
+
+.menu__principal{
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 0.10rem;
-    font-family:var(--fuente-general);
-    font-size: 1rem;
-    transition: 1s;
-    cursor: pointer;
-    transition:  1s;
+    align-content: center;
+    column-gap: 3rem;
+    
 }
 
-.menu__opcion__enlace{
-    color: var(--color-blanco);
+.menu__opcion{
+    padding: 1rem;
+    
 }
 
-.menu__opcion {
-    background-color: var(--color-vede_oscuro);
-    color: orange;
-    border-radius: 100%;
-    padding: 0.50rem;
-    transition: 0.2s;
-    cursor: pointer;
+.menu__logo--imagen{
+    width: 7rem;
+    height:7rem;
+    border-radius: 50%;
 
 }
 
-    .menu__opcion:hover{
-    background-color: var(--color-verde_claro);
-    transition: 0.2s;
-    border-radius: 2rem;
-    padding: 0.50rem;
-}
 
 .banner{
-    height: 15rem;
     width: 100%;
 }
+
+
+.bienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
+.descripción{
+    width: 80%;
+}
+
+
+
+
+.bienvenida__titulo{
+    padding-bottom: 1rem;
+}
+
+.bienvenida__decoracion{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 2rem;
+    list-style-type: disc;
+}
+
+
+
+.bienvenida__decoracion--item{
+    list-style-type: disc;
+}
+
 
 
 .footer{
     display: flex;
     flex-direction: row;
     background-color: var(--color-vede_oscuro);
+    justify-content: space-evenly;
+    padding: 1rem;
 
-    padding: 0.5rem;
 }
 
-.footer__informacion{
 
-    padding: 0.5rem;
+/*-----Servicios-------*/ 
+
+.introduccion__titulo{
+    font-size: 2rem;
+    text-align: center;
 }
+
+.productos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4rem;
+}
+
+.productos__titulo{
+    text-align: center;
+    width: 100%;
+}
+
+.libros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    box-shadow: 20px 20px 30px 3px var(--color-verde_claro);
+    border-radius: 3rem;
+}
+
+.libros__imagenes{
+    width: 50%;
+    border-radius: 10%;
+}
+
+.libro__descricion{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+
+/*-----------about------------*/
+
+
+
+
