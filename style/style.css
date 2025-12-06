@@ -44,7 +44,7 @@ body{
 
 .menu__opcion{
     padding: 1rem;
-    
+    font-size: 1.2rem;
 }
 
 .menu__logo--imagen{
@@ -74,8 +74,6 @@ body{
 }
 
 
-
-
 .bienvenida__titulo{
     padding-bottom: 1rem;
 }
@@ -87,7 +85,6 @@ body{
     padding: 0 2rem;
     list-style-type: disc;
 }
-
 
 
 .bienvenida__decoracion--item{
@@ -118,6 +115,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 4rem;
+    padding: 4rem;
 }
 
 .productos__titulo{
@@ -134,19 +132,61 @@ body{
     border-radius: 3rem;
 }
 
+
 .libros__imagenes{
     width: 50%;
     border-radius: 10%;
+    object-fit: cover;
 }
 
 .libro__descricion{
-    font-size: 1rem;
+    font-size: 90%;
     font-weight: bolder;
 }
 
 
+.libro__precio{
+    font-size: 75%;
+}
+
 /*-----------about------------*/
 
+.quines-somos {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 2px var(--color-vede_oscuro) ;
+}
 
 
+
+.proposito {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+.proposito__titulo{
+    padding: 1.2rem;  
+    color: var(--color-negro);
+    font-size:3rem;
+}
+
+.proposito__img {
+    width: 17rem;
+    height: auto;
+    border-radius: .5rem;
+    
+}
+
+.proposito__descripcion{
+    font-size: 1.1rem;
+    text-align: justify;
+}
 
