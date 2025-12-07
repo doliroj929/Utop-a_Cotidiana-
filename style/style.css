@@ -20,7 +20,7 @@ body{
 
 /*Receteo de estilo*/
 *{
-    padding: 0;
+    padding: 0;3
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -248,9 +248,15 @@ body{
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background-color: var(--color-vede_oscuro);
+    height: 50rem;
     border-radius: 2rem;
     justify-content: center;
+    font-size: 1.2rem;
+}
+
+.formulario__input{
+    width: 10rem;
+    height: 2rem ;
 }
 
 
@@ -260,11 +266,51 @@ body{
     align-items: center;
     align-content: center;
     width: 70rem;
-    height: 30rem;
+    height: 70rem;
     justify-content: center;
     border-radius: 1rem;
     box-shadow: 0px 0px 30px 35px var(--color-blanco);
     border: none;
-
     flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.formulario__label{
+    padding: 2rem;
+}
+
+.enviar{
+    border-radius: 100%;
+    width: 7rem;
+    height: 7rem;
+    background-color: red;
+    box-shadow: 5px 5px 2px 2px;
+    font-weight: bolder;
+}
+
+
+
+/*--------Eventos----------*/
+
+.pagina-eventos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.eventos{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    padding: 5rem;
+}
+
+.eventos__celda{
+    
 }

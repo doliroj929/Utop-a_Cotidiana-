@@ -11,11 +11,8 @@
 <!--header-->
     
 <header class="menu">
-
         <nav >
             <ul class="menu__principal">
-
-
                     <a href="./index.html" >
                         <img class="menu__logo--imagen" src="./assets/lofo_final.png" alt="logo Utopía Cotidiana.">
                     </a> 
@@ -34,6 +31,7 @@
         </nav>
 </header>
 
+
 <!--main-->
 
 <main class="formulario">
@@ -45,34 +43,63 @@
         <fieldset class="formulario__contenido">
             <legend class="formulario__titulo">Se parte</legend>
 
-            <label class="formulario__label">Nombre completo:</label>
+            <label class="formulario__label">Nombre completo:
                 <input class="formulario__input" type="text" placeholder=" Nombre y apellidos">
+            </label>
 
-            <label class="formulario__label">Correo electrónico:</label>
+            <label class="formulario__label">Correo electrónico:
                 <input class="formulario__input" type="email" placeholder="@">
+            </label>
 
-            <label class="formulario__label">Edad:</label>
-                <input class="formulario__input" type="number" placeholder="tu edad en número">
+
+            <label class="formulario__label">Edad:
+                <input class="formulario__input" type="number" min="18" max="100" placeholder="tu edad en número">
+            </label>
+
 
             <label class="formulario__label">¿Cómo te identificas?</label>
 
-            <label class="formulario__opcion">
-                Hombre cisgénero
+            <label class="formulario__opcion">Hombre cisgénero
                 <input class="formulario__radio" type="radio" name="genero">
             </label>
 
-            <label class="formulario__opcion">
-                Mujer cisgénero
+            <label class="formulario__opcion">Mujer cisgénero
                 <input class="formulario__radio" type="radio" name="genero">
             </label>
 
-            <label class="formulario__opcion" >
-                Otres géneros:
+            <label class="formulario__opcion" >Otres géneros:
                 <input class="formulario__radio" type="radio" name="genero">
                 <input class="formulario__input formulario__input--otros" type="text" placeholder="¿Cómo te identificas?">
             </label>
 
-            <label   ></label>
+            <label  class="formulario__label"  >De donde eres
+                <select  >
+                    <option value="">-- Selecciona una comunidad --</option>
+
+                    <option value="andalucia">Andalucía</option>
+                    <option value="aragon">Aragón</option>
+                    <option value="asturias">Asturias</option>
+                    <option value="baleares">Islas Baleares</option>
+                    <option value="canarias">Canarias</option>
+                    <option value="cantabria">Cantabria</option>
+                    <option value="castilla_la_mancha">Castilla-La Mancha</option>
+                    <option value="castilla_y_leon">Castilla y León</option>
+                    <option value="cataluna">Cataluña</option>
+                    <option value="comunidad_valenciana">Comunidad Valenciana</option>
+                    <option value="extremadura">Extremadura</option>
+                    <option value="galicia">Galicia</option>
+                    <option value="la_rioja">La Rioja</option>
+                    <option value="madrid">Comunidad de Madrid</option>
+                    <option value="murcia">Región de Murcia</option>
+                    <option value="navarra">Navarra</option>
+                    <option value="pais_vasco">País Vasco</option>
+                    <option value="ceuta">Ceuta</option>
+                    <option value="melilla">Melilla</option>
+                </select>
+            </label>
+
+            <button class="enviar">ENVIAR</button>
+
 
         </fieldset>
     </form>
@@ -80,7 +107,7 @@
 </main>
 
 
-</main>
+
 
 <!--footer-->
 
