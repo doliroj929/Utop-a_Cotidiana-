@@ -8,12 +8,14 @@
     --color-vede_oscuro:#2F9C95;
     --color-blanco:#fbfffe;
     --color-negro:#1b1b1e;
+    --color-azul_claro: #E5FFFC;
     --fuente-general: "Merriweather", serif;
 
 }
 
 body{
     width: 100%;
+    background-color: var(--color-azul_claro);
 }
 
 /*Receteo de estilo*/
@@ -190,3 +192,79 @@ body{
     text-align: justify;
 }
 
+
+/*-----Blog-------*/ 
+
+
+.actividades{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.actividades__taller{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: maroon;
+}
+
+
+
+.actividades__taller-titulo{
+    display:inline-flex;
+    font-size: 1.5rem;
+    background-color: var(--color-vede_oscuro);
+}
+
+.actividades__taller-descripcion{
+    text-align: justify;
+    padding: 2rem;
+}
+
+.actividades__taller-imagen{
+    width:15rem;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: cyan;
+}
+
+/*-----Contacto------*/
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+
+.formulario__general{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--color-vede_oscuro);
+    border-radius: 2rem;
+    justify-content: center;
+}
+
+
+.formulario__contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 70rem;
+    height: 30rem;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px 35px var(--color-blanco);
+    border: none;
+
+    flex-wrap: wrap;
+}

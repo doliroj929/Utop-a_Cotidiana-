@@ -36,44 +36,49 @@
 
 <!--main-->
 
-<main>
+<main class="formulario">
 
-<P>Quieres un cambio ser parte</P>
+    <p class="formulario__intro"> Quiero ser parte del cambio  </p>
 
-<form>
-    <fieldset>
-        <legend>Se parte</legend>
-        <label >Nombre completo: </label> 
-        <input type="text" placeholder=" Nombre y apellidos">
-        
+    <form class="formulario__general">
 
-        <label>Correo eletronico:</label>
-        <input type="email" name="" id=""  placeholder="@">
+        <fieldset class="formulario__contenido">
+            <legend class="formulario__titulo">Se parte</legend>
 
-        <label >Edad:</label>
-        <input type="number" placeholder="tu edad en numero">
+            <label class="formulario__label">Nombre completo:</label>
+                <input class="formulario__input" type="text" placeholder=" Nombre y apellidos">
 
-        <label >Como te identificas:</label>
-        
-        <label >
-            Hombre cisgénero
-        <input type="radio" name="genero"> 
-        </label>
-        
-        <label >
-            Mujer cisgénero
-        <input type="radio" name="genero"> 
-        </label>
-        
-        <label >otres generos:
-            <input type="radio" name="genero"> 
-            <input type="text" placeholder="Como te identificas ?">
-        </label>
-        
-        
+            <label class="formulario__label">Correo electrónico:</label>
+                <input class="formulario__input" type="email" placeholder="@">
 
-    </fieldset>
-</form>
+            <label class="formulario__label">Edad:</label>
+                <input class="formulario__input" type="number" placeholder="tu edad en número">
+
+            <label class="formulario__label">¿Cómo te identificas?</label>
+
+            <label class="formulario__opcion">
+                Hombre cisgénero
+                <input class="formulario__radio" type="radio" name="genero">
+            </label>
+
+            <label class="formulario__opcion">
+                Mujer cisgénero
+                <input class="formulario__radio" type="radio" name="genero">
+            </label>
+
+            <label class="formulario__opcion" >
+                Otres géneros:
+                <input class="formulario__radio" type="radio" name="genero">
+                <input class="formulario__input formulario__input--otros" type="text" placeholder="¿Cómo te identificas?">
+            </label>
+
+            <label   ></label>
+
+        </fieldset>
+    </form>
+
+</main>
+
 
 </main>
 
