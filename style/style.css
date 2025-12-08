@@ -9,6 +9,8 @@
     --color-blanco:#fbfffe;
     --color-negro:#1b1b1e;
     --color-azul_claro: #E5FFFC;
+    --color-zaul_rey: #007bff; 
+    --color-rojo: red;
     --fuente-general: "Merriweather", serif;
 
 }
@@ -195,43 +197,111 @@ body{
 
 /*-----Blog-------*/ 
 
-
-.actividades{
-    display:flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 1rem;
+.actividades {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 20px;
 }
 
-.actividades__taller{
+@media (min-width: 768px) {
+    .actividades {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .actividades__taller {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 60px 1fr;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 8px;
+        align-items: start;
+    }
+
+    .actividades__taller-titulo {
+        grid-column: 1 / -1; 
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .actividades__taller-imagen {
+        grid-row: 2;
+        grid-column: 1;
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        object-fit: cover;
+    }
+
+    .actividades__taller-descripcion {
+        grid-row: 2;
+        grid-column: 2;
+        text-align: left;
+    }
+}
+
+@media (max-width: 767px) {
+    .actividades {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .actividades__titulo {
+        font-size: 1.8rem;
+    }
+
+    .actividades__subtitulo {
+        font-size: 1.4rem;
+    }
+
+.actividades__taller {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    background-color: maroon;
+    /* El espacio entre la imagen y los demás elementos */
+    gap: 1rem; 
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 
-
-.actividades__taller-titulo{
-    display:inline-flex;
-    font-size: 1.5rem;
-    background-color: var(--color-vede_oscuro);
-}
-
-.actividades__taller-descripcion{
-    text-align: justify;
-    padding: 2rem;
-}
-
-.actividades__taller-imagen{
-    width:15rem;
+.actividades__taller-imagen {
+    /* La posición absoluta ha sido eliminada */
+    width: 15rem;
     height: 15rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: cyan;
+    border-radius: 4px;
+    object-fit: cover;
 }
+
+
+
+
+
+    .actividades__taller-titulo {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: 0; 
+    }
+
+    .actividades__taller-descripcion {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+
+
+
+/*-----Blog-------*/ 
+
+
+
+
 
 /*-----Contacto------*/
 
@@ -248,7 +318,7 @@ body{
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    height: 50rem;
+    height: 80rem;
     border-radius: 2rem;
     justify-content: center;
     font-size: 1.2rem;
@@ -292,25 +362,101 @@ body{
 
 /*--------Eventos----------*/
 
-.pagina-eventos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
+.cuerpo-pagina {
+    background-color: var(--color-azul_claro);
+    color: var(--color-negro);
+    font-family: var(--fuente-general);
+    margin: 0;
+    padding: 0;
+}
+
+/* Títulos */
+.titulo-principal {
+    color: var(--color-vede_oscuro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo-seccion {
+    color: var(--color-vede_oscuro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la página principal */
+.pagina-eventos {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Contenedora */
+.seccion-contenido {
+    margin-bottom: 40px;
+}
+
+/* Sección de Eventos (Tabla) */
+.eventos-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.eventos__encabezado {
+    background-color: var(--color-vede_oscuro);
+    color: var(--color-blanco);
+    text-align: left;
+    font-weight: bold;
+}
+
+.eventos__celda--titulo {
+    padding: 12px 15px;
+}
+
+.eventos__celda {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--color-azul_claro);
 }
 
 
-
-.eventos{
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-    border: solid;
-    padding: 5rem;
+.eventos__fila:nth-of-type(even) {
+    background-color: var(--color-azul_claro);
 }
 
-.eventos__celda{
-    
+.eventos__fila:hover {
+    background-color: var(--color-verde_claro);
+    color: var(--color-negro);
+}
+
+/* Sección de Galería de Eventos (Usando Flexbox) */
+.galeria-eventos {
+    display: flex; /* Contenedor Flex */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.concierto-imagen {
+    /* Los ítems hijos del contenedor flex */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid var(--color-vede_oscuro);
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.concierto-imagen:hover {
+    transform: scale(1.05);
 }

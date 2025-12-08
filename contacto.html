@@ -36,46 +36,44 @@
 
 <main class="formulario">
 
-    <p class="formulario__intro"> Quiero ser parte del cambio  </p>
-
+    <p class="formulario__intro"> Quiero ser parte del cambio </p>
+    
     <form class="formulario__general">
 
         <fieldset class="formulario__contenido">
-            <legend class="formulario__titulo">Se parte</legend>
+            <legend class="formulario__titulo">Sé parte</legend>
 
-            <label class="formulario__label">Nombre completo:
-                <input class="formulario__input" type="text" placeholder=" Nombre y apellidos">
+            <label class="formulario__label">Nombre completo: <span class="obligatorio">*</span>
+                <input class="formulario__input" type="text" name="nombre" placeholder="Nombre y apellidos" >
             </label>
 
-            <label class="formulario__label">Correo electrónico:
-                <input class="formulario__input" type="email" placeholder="@">
+            <label class="formulario__label">Correo electrónico: <span class="obligatorio">*</span>
+                <input class="formulario__input" type="email" name="email" placeholder="TuCoreo@tusabras.com" >
             </label>
 
+            <label class="formulario__label">Edad:</label>
+            <input class="formulario__input" type="number" name="edad" min="18" max="100" placeholder="Tu edad en número">
+            <br>
 
-            <label class="formulario__label">Edad:
-                <input class="formulario__input" type="number" min="18" max="100" placeholder="tu edad en número">
+            <p class="formulario__label formulario__label--radio-group">¿Cómo te identificas? <span class="obligatorio">*</span></p>
+
+            <label class="formulario__opcion">Hombre cisgénero:
+                <input class="formulario__radio" type="radio" name="genero" value="hombre" >
+            </label>
+            
+            <label class="formulario__opcion">Mujer cisgénero:
+                <input class="formulario__radio" type="radio" name="genero" value="mujer">
             </label>
 
-
-            <label class="formulario__label">¿Cómo te identificas?</label>
-
-            <label class="formulario__opcion">Hombre cisgénero
-                <input class="formulario__radio" type="radio" name="genero">
+            <label class="formulario__opcion">Otres géneros:
+                <input class="formulario__radio" type="radio" name="genero" value="otros">
+                <input class="formulario__input formulario__input--otros" type="text" name="otro_genero_descripcion" placeholder="¿Cómo te identificas? ">
             </label>
+            <br>
 
-            <label class="formulario__opcion">Mujer cisgénero
-                <input class="formulario__radio" type="radio" name="genero">
-            </label>
-
-            <label class="formulario__opcion" >Otres géneros:
-                <input class="formulario__radio" type="radio" name="genero">
-                <input class="formulario__input formulario__input--otros" type="text" placeholder="¿Cómo te identificas?">
-            </label>
-
-            <label  class="formulario__label"  >De donde eres
-                <select  >
-                    <option value="">-- Selecciona una comunidad --</option>
-
+            <label class="formulario__label">¿De dónde eres? <span class="obligatorio">*</span>
+                <select name="comunidad" >
+                    <option value="">-- Selecciona una comunidad: --</option>
                     <option value="andalucia">Andalucía</option>
                     <option value="aragon">Aragón</option>
                     <option value="asturias">Asturias</option>
@@ -98,14 +96,17 @@
                 </select>
             </label>
 
-            <button class="enviar">ENVIAR</button>
-
+            <label class="formulario__label">¿Cuándo nos quieres visitar?</label>
+            <input class="formulario__input" type="date" name="fecha_visita" > 
+            <br>
+            
+            
+            <button class="enviar" type="submit">ENVIAR</button>
 
         </fieldset>
     </form>
 
 </main>
-
 
 
 
